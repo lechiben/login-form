@@ -117,14 +117,28 @@ body {
   color: #a395e0;
   position: absolute;
   top: 50%;
-  left: 0.9rem;
-  pointer-events: none;
   transform: translateY(-50%);
   transition: 0.2s ease;
 }
 
-.login-form .input-wrapper .input-field:focus  ~ i{
+.login-form .input-wrapper i:not(.eye-icon){
+  left: 0.9rem;
+  pointer-events: none;
+}
+
+.login-form .input-wrapper .input-field:focus  ~ i:not(.eye-icon){
   color: #5f41e4;
+}
+
+.login-form .input-wrapper i.eye-icon{
+  font-size: 1.25rem;
+  cursor: pointer;
+  right: 0.9rem;
+  display: none;
+}
+
+.login-form .input-wrapper .input-field:valid ~ i.eye-icon{
+  display: block;
 }
 
 .login-form .login-button{

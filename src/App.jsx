@@ -1,3 +1,4 @@
+import InputField from "./components/InputField"
 import SocialLogin from "./components/SocialLogin"
 
 const App = () => {
@@ -8,15 +9,10 @@ const App = () => {
       <p className="separator"><span>or</span></p>
 
       <form action="#" className="login-form">
-        <div className="input-wrapper">
-          <input type="email" placeholder="Email address" className="input-field" required/>
-          <i className="material-symbols-rounded">mail</i>
-        </div>
+        <InputField type="email" placeholder = "Email address" icon ="mail"/>
+        <InputField type="password" placeholder = "Password" icon ="lock"/>
+        
 
-        <div className="input-wrapper">
-          <input type="password" placeholder="Password" className="input-field" required/>
-          <i className="material-symbols-rounded">lock</i>
-        </div>
         <a href="#" className="forgot-password-link">Forgot Password?</a>
         <button className="login-button">Log In</button>
       </form>
